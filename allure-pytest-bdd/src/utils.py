@@ -8,6 +8,9 @@ from allure_commons.utils import format_exception
 from allure_commons.utils import represent
 
 
+ALLURE_LINK_MARK = 'allure_link'
+
+
 def get_step_name(node, step):
     name = "{step_keyword} {step_name}".format(step_keyword=step.keyword, step_name=step.name)
     if hasattr(node, 'callspec'):
@@ -79,3 +82,8 @@ def mark_to_str(marker):
         parameters = ', '.join(args + kwargs)
         markstr = '{}({})'.format(markstr, parameters)
     return markstr
+
+
+def allure_links(item):
+    for mark in item.iter_markers(name=ALLURE_LINK_MARK):
+        yield (mark.kwargs["link_type"], mark.args[0], mark.kwargs["name"])
