@@ -27,7 +27,7 @@ Feature: Labels
     Then tag test_tag is present in the report
     And tag another_tag is present in the report
 
-    Scenario: Same tag in gherkin and scenario
+  Scenario: Same tag in gherkin and scenario
     Given example.feature with content:
       """
       Feature: Feature Test

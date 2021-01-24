@@ -1,4 +1,5 @@
 Feature: Scenario outline
+
   Scenario: Scenario outline
     Given example.feature with content:
       """

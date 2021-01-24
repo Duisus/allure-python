@@ -1,5 +1,6 @@
 import allure_commons
 import pytest
+
 from .utils import ALLURE_LINK_MARK
 
 

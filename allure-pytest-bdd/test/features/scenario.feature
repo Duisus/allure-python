@@ -1,4 +1,5 @@
 Feature: Scenario
+
   Scenario: Simple passed scenario
     Given example.feature with content:
       """

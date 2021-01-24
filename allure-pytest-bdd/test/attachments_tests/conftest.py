@@ -1,7 +1,7 @@
 import os.path
 
-from pytest_bdd import then, parsers
 import pytest
+from pytest_bdd import then, parsers
 
 
 @pytest.fixture()

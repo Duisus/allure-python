@@ -1,25 +1,25 @@
-import pytest
+from functools import partial
+
 import allure_commons
-from allure_commons.utils import now
-from allure_commons.utils import uuid4
+import pytest
+from allure_commons.lifecycle import AllureLifecycle
 from allure_commons.model2 import Label, Link
 from allure_commons.model2 import Status
-
-from allure_commons.types import LabelType
-from allure_commons.utils import platform_label
-from allure_commons.utils import host_tag, thread_tag
-from .utils import get_uuid
-from .utils import get_step_name
-from .utils import get_status_details
-from .utils import get_pytest_report_status
-from .utils import allure_links
-from .utils import get_full_name, get_name, get_params
-from .utils import pytest_markers
 from allure_commons.model2 import StatusDetails
-from functools import partial
-from allure_commons.lifecycle import AllureLifecycle
+from allure_commons.types import LabelType
+from allure_commons.utils import host_tag, thread_tag
+from allure_commons.utils import now
+from allure_commons.utils import platform_label
+from allure_commons.utils import uuid4
 
 from .attachment_worker import AttachmentWorker
+from .utils import allure_links
+from .utils import get_full_name, get_name, get_params
+from .utils import get_pytest_report_status
+from .utils import get_status_details
+from .utils import get_step_name
+from .utils import get_uuid
+from .utils import pytest_markers
 
 
 class PytestBDDListener(object):

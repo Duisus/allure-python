@@ -1,13 +1,16 @@
-from pytest_bdd import then
-from pytest_bdd import parsers
 from functools import partial
-from hamcrest import assert_that
+
 # from hamcrest import not_
 from allure_commons_test.report import has_test_case
-from allure_commons_test.result import with_status
-from allure_commons_test.result import has_step
 # from allure_commons_test.result import has_attachment
 from allure_commons_test.result import has_parameter
+from allure_commons_test.result import has_step
+from allure_commons_test.result import with_status
+from hamcrest import assert_that
+from pytest_bdd import parsers
+from pytest_bdd import then
+
+
 # from allure_commons_test.result import has_status_details
 # from allure_commons_test.result import with_message_contains
 # from allure_commons_test.result import has_link
@@ -23,7 +26,7 @@ def match(matcher, *args):
         if not hasattr(arg, '__call__'):
             matcher = partial(matcher, arg)
         else:
-            matcher = partial(matcher, match(arg, *args[i+1:]))
+            matcher = partial(matcher, match(arg, *args[i + 1:]))
             break
     return matcher()
 

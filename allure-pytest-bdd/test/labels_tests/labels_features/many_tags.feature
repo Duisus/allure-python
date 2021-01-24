@@ -13,7 +13,7 @@ Feature: Labels
     And py file with name: example_test
     And with imports: pytest, pytest_bdd, allure
     And with passed steps
-    
+
     And test for My Scenario Test from example.feature
     And py file saved
 
@@ -22,7 +22,7 @@ Feature: Labels
     Then tag test_tag_1 is present in the report
     And tag test_tag_2 is present in the report
 
-    Scenario: Many tags in scenario
+  Scenario: Many tags in scenario
     Given example.feature with content:
       """
       Feature: Feature Test
@@ -49,7 +49,7 @@ Feature: Labels
     Then tag test_tag_1 is present in the report
     And tag test_tag_2 is present in the report
 
-    Scenario: Many tags in gherkin and scenario
+  Scenario: Many tags in gherkin and scenario
     Given example.feature with content:
       """
       Feature: Feature Test

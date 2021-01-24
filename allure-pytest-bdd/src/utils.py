@@ -1,12 +1,12 @@
 import os
 from uuid import UUID
-from allure_commons.model2 import StatusDetails
-from allure_commons.model2 import Status
-from allure_commons.model2 import Parameter
-from allure_commons.utils import md5
-from allure_commons.utils import format_exception
-from allure_commons.utils import represent
 
+from allure_commons.model2 import Parameter
+from allure_commons.model2 import Status
+from allure_commons.model2 import StatusDetails
+from allure_commons.utils import format_exception
+from allure_commons.utils import md5
+from allure_commons.utils import represent
 
 ALLURE_LINK_MARK = 'allure_link'
 

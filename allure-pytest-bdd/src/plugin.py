@@ -1,11 +1,12 @@
-import allure_commons
-import os
-from allure_commons.logger import AllureFileLogger
-from .pytest_bdd_listener import PytestBDDListener
-from .helper import AllureTestHelper
-from .utils import ALLURE_LINK_MARK
-
 import argparse
+import os
+
+import allure_commons
+from allure_commons.logger import AllureFileLogger
+
+from .helper import AllureTestHelper
+from .pytest_bdd_listener import PytestBDDListener
+from .utils import ALLURE_LINK_MARK
 
 
 def pytest_addoption(parser):
@@ -45,6 +46,7 @@ def cleanup_factory(plugin):
     def clean_up():
         name = allure_commons.plugin_manager.get_name(plugin)
         allure_commons.plugin_manager.unregister(name=name)
+
     return clean_up
 
 

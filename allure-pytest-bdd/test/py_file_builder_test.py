@@ -1,5 +1,6 @@
-from .py_file_builder import PyFileBuilder
 import pytest
+
+from .py_file_builder import PyFileBuilder
 
 
 def test_common_func():

@@ -1,13 +1,14 @@
-import pytest
-import mock
 from contextlib import contextmanager
+
 import allure_commons
-from allure_commons_test.report import AllureReport
+import mock
+import pytest
 from allure_commons.logger import AllureFileLogger
-from .steps import *  # noqa F401 F403
+from allure_commons_test.report import AllureReport
 from pytest_bdd import given, when, parsers
 
 from .py_file_builder import PyFileBuilder
+from .steps import *  # noqa F401 F403
 
 pytest_plugins = "pytester"
 
@@ -86,7 +87,6 @@ def add_func_in_builder(content, current_py_file_builder):
 
 @given("with passed steps")
 def add_passed_steps(current_py_file_builder):
-
     passed_steps = '@pytest_bdd.given("passed step")\n' \
                    '@pytest_bdd.when("passed step")\n' \
                    '@pytest_bdd.then("passed step")\n' \
@@ -98,7 +98,6 @@ def add_passed_steps(current_py_file_builder):
 
 @given("with failed steps")
 def add_failed_steps(current_py_file_builder):
-
     failed_steps = '@pytest_bdd.given("failed step")\n' \
                    '@pytest_bdd.when("failed step")\n' \
                    '@pytest_bdd.then("failed step")\n' \
@@ -110,10 +109,9 @@ def add_failed_steps(current_py_file_builder):
 
 @given(parsers.parse("test for {scenario_name} from {feature_file}"))
 def add_scenario_step(scenario_name, feature_file, current_py_file_builder):
-
     scenario_func = f'@pytest_bdd.scenario("{feature_file}", "{scenario_name}")\n' \
-                     'def test_scenario():\n' \
-                     '    pass'
+                    'def test_scenario():\n' \
+                    '    pass'
 
     current_py_file_builder.add_func(scenario_func)
 

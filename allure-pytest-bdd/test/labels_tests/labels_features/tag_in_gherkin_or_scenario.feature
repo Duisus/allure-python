@@ -20,7 +20,7 @@ Feature: Labels
 
     Then tag test_tag is present in the report
 
-    Scenario: Tag in scenario
+  Scenario: Tag in scenario
     Given example.feature with content:
       """
       Feature: Feature Test
